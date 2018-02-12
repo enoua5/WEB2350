@@ -1,0 +1,35 @@
+#first {
+	width: 150px;
+	float: right;
+}
+
+#second {
+	width: 150px;
+	float: left;
+}
+
+#third {
+	clear:both;
+}
+
+img {
+	z-index: -1;
+	position: absolute;
+}
+
+#example1, #example2 {
+	background: white;
+	border: 2px solid black;
+}
+
+span {
+	background: white;
+	display: block;
+	border: 0.5em solid red;
+	padding: 1em;
+	margin: 0.5em;
+}
+
+span.altern1 {
+	background: #5b5;
+}
