@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript Example</title>
+  <meta charset="utf-8">
+	
+	<script>
+		function myFunction(a, b) {
+			return a * b;
+		}
+		
+		function helloWorld(){
+			alert("Hello World!");
+		}
+		
+		var myVar = setInterval(function(){
+			myTimer();
+		}, 1000)
+		
+		function myTimer() {
+			var d = new Date();
+			var t = d.toLocaleTimeString();
+			document.getElementById("timer").innerHTML = t;
+		}
+		
+		function myStopFunction() {
+			clearInterval(myVar);
+		}
+	</script>
+</head>
+<body>
+	<h1>Calculate Your Grade</h1>
+	<div id="grade"></div>
+	<hr>
+	<h1>Magic 8-Ball</h1>
+	<div id="ball"></div>
+	<hr>
+	<div id="hello">
+		<input type="button" value="Say Hello" onclick="helloWorld()"/>
+	</div>
+	<hr>
+	<div id="timer">
+
+	</div>
+	<input type="button" value="Stop" onclick="myStopFunction()"/>
+	<hr>
+	<script>
+//		document.write("<h2>Hello World!</h2>");
+//		document.write("<h3>Hello again!</h3>");
+//		console.log("Test");
+//		
+//		var firstName = "Cody";
+//		var age = 100;
+//		var pie = 3.14;
+//		var lastName;
+//		
+//		lastName = "Squadroni"
+//		console.log(firstName);
+//		alert("Error!!!!!");
+//		var x = prompt("What state do you live in?")
+//		document.write("<p>You currently live in " + x + "</p>");
+//		document.write("<p>You currently live in " + x + "</p>");
+		
+//		var num1 = parseInt(prompt("Enter a number:"));
+//		var num2 = parseInt(prompt("Enter another number:"));
+//		var z = num1 + num2;
+		
+//		document.write(num1 + " + " + num2 + " = " + z);
+		
+//		var bankAccount = parseInt(prompt("How much money do you have?"));
+//		
+//		
+//		if(bankAccount > 50 && bankAccount < 99){
+//			 document.write("<p>Go ahead and get gas</p>");
+//		} 
+//		else if(bankAccount == 100) {
+//			document.write("<p>Nice</p>");
+//		}
+//		else if(){
+//			x = 5;
+//			y = "5"
+//			
+//						x == y
+//						x === y
+//		}
+//		else {
+//			document.write("<p>I guess you can buy gum");
+//		}
+		
+		/*
+			==   Equal To
+			===  Value and Type
+			!=   Not Equal To
+			<    Less Than
+			>    Greater Than
+			<=   Less than or Equal To
+			>=   Greater Than or Equal To
+		*/
+		var tests = parseInt(prompt("Exam Grade?"));
+		var labs = parseInt(prompt("Lab Grade?"));
+		var total = (tests + labs) / 2;
+		var x = document.getElementById("grade")
+		
+		if(total >= 90){
+			x.innerHTML = "<p>You get an A!</p>";
+		} else if(total >= 80) {
+			x.innerHTML = "<p>You get an B!</p>";
+		} else if(total >= 70) {
+			x.innerHTML = "<p>You get an C!</p>";
+		} else if(total >= 60) {
+			x.innerHTML = "<p>You get an D!</p>";
+		} else {
+			x.innerHTML = "<p>Ouch!</p>";
+		}
+		
+		var ans = prompt("What do you wish to ask the magic 8 ball?");
+		var randnum = Math.floor(Math.random() * 8)
+		var y = document.getElementById("ball");
+		
+		if(randnum == 0){
+			y.innerHTML = "There is no chance this will happen.";
+		} else if(randnum == 1){
+			y.innerHTML = "Highly unlikely!";	
+		} else if(randnum == 2){
+			y.innerHTML = "Probably not, but you never know!";	
+		} else if(randnum == 3){
+			y.innerHTML = "Maybe. Maybe not!";	
+		} else if(randnum == 4){
+			y.innerHTML = "This may happen if you are lucky!";	
+		} else if(randnum == 5){
+			y.innerHTML = "Your chances are good!";	
+		} else if(randnum == 6){
+			y.innerHTML = "This will almost certainly happen!";	
+		} else if(randnum == 7){
+			y.innerHTML = "Definitely!";	
+		}
+		
+		
+		for(var s = 0; s < 100; s++){
+			console.log(s);
+		}
+		
+		var a = 0;
+		
+		while(a < 50){
+			document.write(a + "<br>");
+			a += 2;
+		}
+		
+	
+		var funcTotal = myFunction(10,10);
+		console.log(myFunction(5, 10));
+		
+		helloWorld();
+		
+	
+	</script>
+</body>
+</html>
